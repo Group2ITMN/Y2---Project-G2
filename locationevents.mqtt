@@ -1,7 +1,12 @@
 #locationevents
 
 BRK=localhost
-TOPIC=/group2proj/loca
+TOPIC=/group2proj/location
+
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 1, 100, 5 , "07:30:00","08:30:00",220,"Study Room"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 2, 101, 3 , "11:45:00","12:45:00",019,"Counselling service"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 3, 102, 1 , "15:15:00","16:15:00",100,"GYM"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 4, 103, 7 , "09:25:00","10:25:00",015,"Academic Support"
 
 mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
 do
