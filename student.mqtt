@@ -1,0 +1,44 @@
+BRK=localhost
+TOPIC=/group2proj/student
+
+mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
+do
+        #first all we do is echo the linw (topic message) to the screem
+        echo ""
+
+        echo "MSG Received is : " $line 
+
+        echo"" 
+
+        msg=$(echo $line |cut -f2- -d' ')
+
+
+
+        student_id=$(echo $msg |cut -f1 -d',')
+
+        echo student id: $student_id 
+
+        student_num=$(echo $msg |cut -f2 -d',')
+
+        
+        
+        echo student number: $student_num 
+
+        first_name=$(echo $msg  |cut -f3 -d',')
+
+        echo first name: $first_name 
+
+        last_name=$(echo $msg |cut -f4 -d',')
+
+        echo last name:$last_name 
+
+        programme=$(echo $msg  |cut -f5 -d',')
+
+        echo programme:$programme 
+
+        contact=$(echo $msg  |cut -f6 -d',')
+
+        echo contact: $contact 
+
+
+done
