@@ -1,0 +1,42 @@
+ #Building 
+
+BRK=localhost
+TOPIC=/group2proj/student
+
+mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
+do
+        #first all we do is echo the linw (topic message) to the screem
+        echo ""
+
+        echo "Second MSG received is Building Information : " $line 
+
+        echo"" 
+
+        msg=$(echo $line |cut -f2- -d' ')
+
+
+
+        name=$(echo $msg |cut -f1 -d',')
+
+        echo name of building: $name 
+
+        address=$(echo $msg |cut -f2 -d',')
+        
+        echo building address: $address 
+
+        campus=$(echo $msg  |cut -f3 -d',')
+
+        echo name of campus: $campus 
+
+        city=$(echo $msg |cut -f4 -d',')
+
+        echo city:$city
+
+        country=$(echo $msg  |cut -f5 -d',')
+
+        echo country:$country
+
+    
+
+
+done
