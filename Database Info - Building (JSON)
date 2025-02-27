@@ -1,0 +1,48 @@
+
+
+[
+    {
+        "building_id": 5,
+        "created_at": "2025-02-26T19:06:42.292711+00:00",
+        "name": "Main Building",
+        "address": "Old Blessington Road, Belgard Road",
+        "campus": "Tallaght",
+        "city": "Dublin",
+        "country": "Ireland"
+    },
+    {
+        "building_id": 3,
+        "created_at": "2025-02-26T19:06:42.292711+00:00",
+        "name": "Main Building",
+        "address": "St Stephen’s Green",
+        "campus": "Aungier Street",
+        "city": "Dublin",
+        "country": "Ireland"
+    },
+    {
+        "building_id": 1,
+        "created_at": "2025-02-26T19:06:42.292711+00:00",
+        "name": "Spraoi Building",
+        "address": "Blanchardstown Road N",
+        "campus": "Blanchardstown",
+        "city": "Dublin",
+        "country": "Ireland"
+    },
+    {
+        "building_id": 7,
+        "created_at": "2025-02-26T19:06:42.292711+00:00",
+        "name": "Central Quad",
+        "address": "Grangegorman Lower",
+        "campus": "Grangegorman",
+        "city": "Dublin",
+        "country": "Ireland"
+    }
+]
+
+
+insert into building(building_id, name, address, campus, city, country) values (5,'Main Building', 'Old Blessington Road, Belgard Road','Tallaght','Dublin', 'Ireland');
+insert into building(building_id, name, address, campus, city, country) values (3,'Main Building', 'St Stephen’s Green','Aungier Street','Dublin', 'Ireland');
+insert into building(building_id, name, address, campus, city, country) values (1,'Spraoi Building', 'Blanchardstown Road N','Blanchardstown','Dublin', 'Ireland');
+insert into building(building_id, name, address, campus, city, country) values (7,'Central Quad', 'Grangegorman Lower','Grangegorman','Dublin', 'Ireland');
+
+
