@@ -1,7 +1,21 @@
- #Building 
+#Building 
 
 BRK=localhost
-TOPIC=/group2proj/student
+TOPIC=/group2proj/building
+
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "5,Main Building, Old Blessington Road Belgard Road,Tallaght,Dublin,Ireland"
+
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "3,Main Building, St Stephen’s Green,Aungier Street,Dublin,Ireland"
+
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "1,Spraoi Building, Blanchardstown Road N,Blanchardstown,Dublin,Ireland"
+
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "7,Central Quad, Grangegorman Lower,Grangegorman,Dublin,Ireland"
+
+echo "check the first terminal and your database for results"
+
+echo 'starting...'
+
+
 
 mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
 do
@@ -14,25 +28,26 @@ do
 
         msg=$(echo $line |cut -f2- -d' ')
 
+        building_id=$(echo $msg | cut -f1 -d',')
+        echo building_id: $building_id
 
-
-        name=$(echo $msg |cut -f1 -d',')
+        name=$(echo $msg |cut -f2 -d',')
 
         echo name of building: $name 
 
-        address=$(echo $msg |cut -f2 -d',')
+        address=$(echo $msg |cut -f3 -d',')
         
         echo building address: $address 
 
-        campus=$(echo $msg  |cut -f3 -d',')
+        campus=$(echo $msg  |cut -f4 -d',')
 
         echo name of campus: $campus 
 
-        city=$(echo $msg |cut -f4 -d',')
+        city=$(echo $msg |cut -f5 -d',')
 
         echo city:$city
 
-        country=$(echo $msg  |cut -f5 -d',')
+        country=$(echo $msg  |cut -f6 -d',')
 
         echo country:$country
 
