@@ -1,0 +1,45 @@
+#locationevents
+
+BRK=localhost
+TOPIC=/group2proj/loca
+
+mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
+do
+        #first all we do is echo the linw (topic message) to the screem
+        echo ""
+
+        echo "Third MSG received is Location Events : " $line 
+
+        echo"" 
+
+        msg=$(echo $line |cut -f2- -d' ')
+
+
+
+        location_id=$(echo $msg |cut -f1 -d',')
+
+        echo location id is: $location_id
+
+        student_id=$(echo $msg |cut -f2 -d',')
+        
+        echo student id: $student_id 
+
+        start_session=$(echo $msg  |cut -f3 -d',')
+
+        echo the start session is: $start_session
+
+        end_session=$(echo $msg |cut -f4 -d',')
+
+        echo the end session is: $end_session
+
+        room=$(echo $msg  |cut -f5 -d',')
+
+        echo room is:$room
+
+        event_type=$(echo $msg |cut -f6 -d',')
+
+        echo the event type is: $event_type
+
+
+
+done
