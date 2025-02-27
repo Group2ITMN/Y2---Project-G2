@@ -1,6 +1,11 @@
 BRK=localhost
 TOPIC=/group2proj/student
 
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 100,"X0021309", "Joseph" , "Newsome","BA_KACOS_B",0878238909
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 101,"X0018905", "Ryan" , "Curran","TA_KACOS_A",0858639009
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 102,"X0019003", "Jason" , "Statement","CA_KACOS_f",0868240909
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 103,"X0028909", "Valentin" ,"Ciubuc","dA_KACOS_f",0839090909
+
 mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
 do
         #first all we do is echo the linw (topic message) to the screem
