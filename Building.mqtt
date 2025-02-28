@@ -3,13 +3,13 @@
 BRK=localhost
 TOPIC=/group2proj/building
 
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "5,Main Building, Old Blessington Road Belgard Road,Tallaght,Dublin,Ireland"
+echo "mosquitto_pub -h localhost -t /group2proj/building -m "5,Main Building, Old Blessington Road Belgard Road,Tallaght,Dublin,Ireland"
 
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "3,Main Building, St Stephen’s Green,Aungier Street,Dublin,Ireland"
+echo "mosquitto_pub -h localhost -t /group2proj/building  -m "3,Main Building, St Stephen’s Green,Aungier Street,Dublin,Ireland"
 
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "1,Spraoi Building, Blanchardstown Road N,Blanchardstown,Dublin,Ireland"
+echo "mosquitto_pub -h localhost -t /group2proj/building -m "1,Spraoi Building, Blanchardstown Road N,Blanchardstown,Dublin,Ireland"
 
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m "7,Central Quad, Grangegorman Lower,Grangegorman,Dublin,Ireland"
+echo "mosquitto_pub -h localhost -t /group2proj/building -m "7,Central Quad, Grangegorman Lower,Grangegorman,Dublin,Ireland"
 
 echo "check the first terminal and your database for results"
 
