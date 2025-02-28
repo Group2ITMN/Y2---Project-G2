@@ -1,0 +1,90 @@
+
+#!/bin/bash
+
+# this will be appended to the SUPABSE_URL
+SUPABASE_URL=
+SUPABASE_KEY=
+# the API endpoint for ac
+API_ENDPOINT="/rest/v1/locationevents"
+#locationevents
+
+# HTTP Header parameters
+# Data will be JSON
+REQ_HEADER="Content-type: application/json"
+
+# Saving data to API via Post request
+REQ_METHOD="POST"
+
+
+
+BRK=localhost
+TOPIC=/group2proj/building 
+
+
+echo mosquitto_pub -h $BRK -t $TOPIC/ -m "5,102,1,15:15:00,16:15:00,Active,Present,100,GYM""
+echo 'start here'" 
+
+
+
+
+mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
+do
+        #first all we do is echo the linw (topic message) to the screem
+        echo ""
+
+        echo "Second MSG received is Building Information : " $line 
+
+        echo"" 
+
+        msg=$(echo $line |cut -f2- -d' ')
+
+        building_id=$(echo $msg | cut -f1 -d',')
+        echo building_id: $building_id
+
+        name=$(echo $msg |cut -f2 -d',')
+
+        echo name of building: $name 
+
+        address=$(echo $msg |cut -f3 -d',')
+        
+        echo building address: $address 
+
+        campus=$(echo $msg  |cut -f4 -d',')
+
+        echo name of campus: $campus 
+
+        city=$(echo $msg |cut -f5 -d',')
+
+        echo city:$city
+
+        country=$(echo $msg  |cut -f6 -d',')
+
+        echo country:$country
+
+        # add the location event to DB
+        #
+        # DATA TO BE SEND IN JSON FORNAT
+
+        JSON='{
+           "building_id": "'"$building_id"'",
+           "name of building": "'"$name"'",
+           "address of building": "'"$address"'",
+           "building campus": "'"$campus"'",
+           "city": "'"$city"'",
+           "country": "'"$country"'"}'
+           
+
+          # https://askubuntu.com/questions/1162945/how-to-send-json-as-variable-with-bash-curl
+
+        # echo to check that it looks correct
+        echo $JSON
+
+        # Use CURL to send POST request + data
+        response=$(curl -X  $REQ_METHOD $SUPABASE_URL$API_ENDPOINT -H "apikey: $SUPABASE_KEY" -H "Authorization: Bearer $SUPABASE_KEY" -H "$REQ_HEADER" -d "$JSON")
+
+        # Show response
+        echo $response
+
+
+
+done
