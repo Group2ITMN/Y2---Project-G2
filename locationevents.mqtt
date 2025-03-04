@@ -37,9 +37,9 @@ do
         
         echo room id: $room_id 
 
-        event_start=$(echo $msg  |cut -f5 -d',')
+        event_start_time=$(echo $msg  |cut -f5 -d',')
 
-        echo start of event is: $event_start
+        echo start time of event is: $event_start_time
 
         event_status=$(echo $msg |cut -f6 -d',')
 
