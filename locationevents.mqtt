@@ -28,20 +28,24 @@ do
         student_id=$(echo $msg |cut -f2 -d',')
         
         echo student id: $student_id 
+        
+        building_id=$(echo $msg |cut -f3 -d',')
+        
+        echo building id: $building_id 
 
-        start_session=$(echo $msg  |cut -f3 -d',')
+        room_id=$(echo $msg |cut -f4 -d',')
+        
+        echo room id: $room_id 
 
-        echo the start session is: $start_session
+        event_start=$(echo $msg  |cut -f5 -d',')
 
-        end_session=$(echo $msg |cut -f4 -d',')
+        echo start of event is: $event_start
 
-        echo the end session is: $end_session
+        event_status=$(echo $msg |cut -f6 -d',')
 
-        room=$(echo $msg  |cut -f5 -d',')
+        echo status of event is: $event_status
 
-        echo room is:$room
-
-        event_type=$(echo $msg |cut -f6 -d',')
+        event_type=$(echo $msg |cut -f7 -d',')
 
         echo the event type is: $event_type
 
