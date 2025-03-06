@@ -3,10 +3,11 @@
 BRK=localhost
 TOPIC=/group2proj/location
 
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 1, 100, 000 , "07:30:00","In",000,"Lobby"
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 2, 101, 3 , "11:45:00","OUT",019,"Study Room"
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 3, 102, 000 , "15:15:00","IN",000,"Lobby"
-echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 4, 103, 7 , "09:25:00","OUT",015,"Academic Support"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 1, 100, 01, "07:30:00","Lab","IN"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 1, 100, 01, "08:30:00","Lab","OUT"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 2, 101, 03 , "11:45:00","Study Room","IN"
+echo "mosquitto_pub -h $BRK -t $TOPIC/ -m 2, 101, 03 , "12:45:00","Study Room","OUT"
+
 
 mosquitto_sub -v -h $BRK -t $TOPIC/# | while read line
 do
@@ -29,25 +30,21 @@ do
         
         echo student id: $student_id 
         
-        building_id=$(echo $msg |cut -f3 -d',')
+        room_id=$(echo $msg |cut -f3 -d',')
         
-        echo building id: $building_id 
+        echo building id: $room_id 
 
-        room_id=$(echo $msg |cut -f4 -d',')
-        
-        echo room id: $room_id 
+        event_time=$(echo $msg  |cut -f4 -d',')
 
-        event_start_time=$(echo $msg  |cut -f5 -d',')
+        echo start time of event is: $event_time
 
-        echo start time of event is: $event_start_time
+        event_type=$(echo $msg |cut -f5 -d',')
+
+        echo the event type is: $event_type
 
         event_status=$(echo $msg |cut -f6 -d',')
 
         echo status of event is: $event_status
-
-        event_type=$(echo $msg |cut -f7 -d',')
-
-        echo the event type is: $event_type
 
 
 
