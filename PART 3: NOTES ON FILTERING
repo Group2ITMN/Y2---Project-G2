@@ -1,0 +1,30 @@
+15 minutes of video -
+
+(RYAN)
+
+Lists of query links that may be useful to help build own complex queries and filtering of data.
+
+
+- step 1: Pre-requisits - run nom install, add supabase URL and anon API key to .env, start application using npm run dev(can download a zip file or fork, put api and url in .env )
+
+- step 2: have a one to many relationship with events. ( one computer has many events) - filtering wont work if not set up.
+
+- features - has a search box, directional sorting, click a link brings to different page, search is not case sensitive  - search crash returns an ilike query, delete button - gets rid of particular fields of data
+
+- like - case sensitive
+
+- ilike - not case sensitive 
+
+- node and svelte kit don't get copied up to your repository because the .gigignore ignores node_modules and /.svelte-kit - these can be deleted if there's unexplainable errors. F12 also provides information on errors. 
+
+- console.log can debug code.in terminal (f12)
+
+- client side errors: things happening in the browser, that doesn't load up properly - causes trouble in browser.
+
+- server errors: hosted application ( via svelte-kit) 
+
+- step 3: go to events page - page.js - import * as db from $lib - hoover over async function (fetch , params) - errors are mainly syntax or type checks. You can go to quick fix (once your hoovering) > disable checking for this file is the last option > click it. Wont do any more type checking - calms down the number of errors - just type related errors that don't apply to us,
+
+
+START FROM 15:19 ON VIDEO FOR SECTION 2
+
