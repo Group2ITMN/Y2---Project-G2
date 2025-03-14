@@ -34,8 +34,8 @@
     }
 ]
 
-insert into room(room_id, name, address, campus, capacity) values (5,'Main Building', 'Old Blessington Road, Belgard Road','Tallaght','Dublin', 'Ireland');
-insert into room(room_id, name, address, campus, capacity) values (3,'Main Building', 'St Stephen’s Green','Aungier Street','Dublin', 'Ireland');
-insert into room(room_id, name, address, campus, capacity) values (1,'Spraoi Building', 'Blanchardstown Road N','Blanchardstown','Dublin', 'Ireland');
-insert into room(room_id, name, address, campus, capacity) values (7,'Central Quad', 'Grangegorman Lower','Grangegorman','Dublin', 'Ireland');
+insert into room(room_id, name, address, campus, capacity) values (7,'5','109',56);
+insert into room(room_id, name, address, campus, capacity) values (2,'7','150',45);
+insert into room(room_id, name, address, campus, capacity) values (8,'1','023',30);
+insert into room(room_id, name, address, campus, capacity) values (4,'7','225',46);
 
