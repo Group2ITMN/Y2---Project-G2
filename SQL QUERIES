@@ -1,0 +1,52 @@
+
+
+SELECT capacity
+from r room
+inner join l locationevents
+on r.room_id = l.room_id
+
+SELECT SUM(capacity)
+from r room
+inner join l locationevents
+on r.room_id = l.room_id
+
+SELECT AVG(capacity)
+from r room
+inner join l locationevents
+on r.room_id = l.room_id
+
+#high and lowest
+SELECT MAX(capacity),MIN(capcity)
+from r room
+
+SELECT MAX(capacity) - MIN(capcity) AS Difference 
+from r room
+
+
+
+SELECT first_name,last_name
+from s student
+inner join l locationevents
+on s.student_id = l.student_id
+
+SELECT COUNT(first_name)
+from s student
+inner join l locationevents
+on s.student_id = l.student_id
+
+SELECT programme
+from s student
+inner join l locationevents
+on s.student_id = l.student_id
+
+SELECT contact
+from s student
+inner join l locationevents
+on s.student_id = l.student_id
+
+
+
+SELECT campus
+from b building
+inner join r room
+on b.building_id = r.building_id
