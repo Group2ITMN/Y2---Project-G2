@@ -1,0 +1,96 @@
+<style>
+
+header h1 {
+        
+        
+        background-color: #1aa1b2;
+        color: aliceblue;
+        text-align: center;
+        padding: 12px;
+    }
+
+    section  {
+        background-color: rgb(180, 202, 220, 0.932);
+        
+    }
+    
+    p {
+        text-align: center;
+    }
+
+    ul {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    li {
+        text-align: left;
+        font-weight: 100;
+    }
+</style>
+
+
+
+<article>
+    <header><h1>About us</h1></header>
+    <div class="container mt-5">
+
+        <div class="row">
+            <main class="m-2">
+                <section class=" p-5 col-sm " >
+                    <div class="row">
+                        <div class="col-sm-4 bg-transparent"> 
+                        <article class="bg-primary text-dark m-1 p-3">
+                            <h2> Valentin Ciubuc</h2> 
+                    
+                        
+                            <p class="bg-info fs-5">Valentin worked on the front-end, the supabase and a script for the mqtt to sort things out faster</p>
+                    
+                        </article>
+        </div>
+            <div class="col-sm-4 ">
+                <article class="bg-primary text-dark m-2 p-3">
+                    <h2>Ryan Curran</h2>
+                    
+                    <p class="bg-info fs-5">Ryan worked on the supabase, the mqtt and the design for the contact page.</p>
+                </article>
+        </div>
+            <div class="col-sm-4 ">
+                <article class="bg-primary text-dark m-2 p-3">    
+                    <h2>Joseph Newsome</h2>
+                    
+                    <p class="bg-info fs-5">Joseph worked on the mqtt and the design for the about us page .</p>
+                </article>
+            </div>
+        </div>    
+                </section>
+            </main>
+        </div>
+    
+    
+
+ 
+    
+        <section>
+            <p>This project is about making a system so students can swipe  in and swipe out of rooms across all TUD campus buildings using student cards. These cards provide a student_id associated with any given student while also displaying the rooms id and the id of the event that has taken place, what time they came in at and if they are in or out of a room. </p>
+            <p> We also put all the stages of the development into a portfillo to reach the end deliverable </p>
+            <p>When making the project we had to consider a few differnet factors for how we are going to get this project to work</p>
+
+            <ul> Functionalities we implemented to our project:
+
+                <li> How to count all the students in a single room</li>
+                <li> What size can we make each table</li>
+                <li> Is there a faster way to input the mqtt?</li>
+                <li> How to connect the mqtt up to the Supabase</li>
+                <li> How to connect the Supabase up to the front-end</li>
+                <li> How should the front-end look</li>
+            </ul>
+
+            <p> Questions like this got us to think hard on how we approach the project and if we can implement them during our timeframe. It also gave us the opportunity to research HTML webpages more and ways for us to input these ideas and get them all sorted out. </p>
+            <p> When working on design we had to think of a way to make it look like something from TU Dublin we thought of this by using a similar colour scheme to TU dublin. We also looked at pictures from the TU dublin campuses to put in the images of the home section.</p>
+        </section>
+            
+    </div>
+    
+</article>    
+
