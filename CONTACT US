@@ -1,0 +1,167 @@
+<article>
+	<h1 class="header">Where To Find Us</h1>
+
+	<div class="valentin_col">
+		<p><strong> Valentin Ciubuc </strong></p>
+		<ul>
+			<li><a href="#">Valentin Ciubuc X00194006@mytudublin.ie</a></li>
+			<li><a href="#">linkdin.com/in/valentinciubuc21</a></li>
+		</ul>
+	</div>
+	<div class="ryan_col">
+		<p><strong> Ryan Curran </strong></p>
+		<ul>
+			<li><a href="#">Ryan Curran X00210445@mytudublin.ie</a></li>
+			<li><a href="#">linkdin.com/in/rc-ryan-curran</a></li>
+		</ul>
+	</div>
+	<div class="joseph_col">
+		<p><strong>Joseph Newsome</strong></p>
+		<ul>
+			<li><a href="#">Joseph Newsome X00209800@mytudublin.ie</a></li>
+			<li><a href="#">linkdin.com/in/joseph-newsome</a></li>
+		</ul>
+	</div>
+
+	<section class="projcontactus-form-header">
+		<h2>Leave Some Feedback</h2>
+	</section>
+
+	<section class="projcontactus-form">
+		<form action="action_page.php">
+			<label for="first_name">First Name</label>
+			<input type="text" id="first_name" name="first_name" placeholder="First Name" />
+
+			<label for="last_name">Last Name</label>
+			<input type="text" id="last_name" name="last_name" placeholder="Last Name" />
+
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email" placeholder="Email Address" />
+
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Type Your Message..." style="height: 165px"
+			></textarea>
+
+			<input type="submit" value="Submit" />
+		</form>
+	</section>
+</article>
+
+<style>
+	article {
+		background-color: #18416c48;
+	}
+
+	.projcontactus-form-header {
+		border-radius: 5px;
+		border: #3086a4 1px solid;
+		background-color: #1aa1b2;
+		padding-top: -1em;
+		padding-right: 2em;
+		padding-left: 2em;
+		text-align: center;
+		margin: 0.8em auto;
+		width: 25%;
+		color: #f2f2f2;
+		
+	}
+
+	input[type='text'],
+	textarea {
+		width: 99%;
+		padding: 10px;
+		padding-top: 1em;
+		border: 1px solid #ccc;
+		border-radius: 3.5px;
+		box-sizing: border-box;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		resize: vertical;
+	}
+
+	input[type='submit'] {
+		background-color: #3086a4;
+		color: white;
+		padding: 12px 20px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		
+	}
+
+	.projcontactus-form {
+		border-radius: 5px;
+		border: #231f20 1px solid;
+		background-color: #f2f2f2;
+		padding: 1em;
+		margin: 2%;
+		
+	}
+
+	div {
+		border: 1px solid #000;
+		display: inline-table;
+		width: 23%;
+		padding-right: 0.1em;
+		padding-left: 0.1em;
+		margin-left: 0.2em;
+	}
+	.valentin_col {
+		padding-bottom: 5em;
+		margin-left: 16.5em;
+		background-color: rgba(54, 225, 255, 0.513);
+	}
+	.valentin_col p { 
+		text-align: center;
+		color: #f2f2f2;
+	}
+	.ryan_col {
+		padding-bottom: 5em;
+		background-color: rgba(54, 225, 255, 0.513);
+	
+	}
+	.ryan_col p { 
+		text-align: center;
+		color: #f2f2f2;
+	}
+
+	.joseph_col {
+		padding-bottom: 5em;
+		background-color: rgba(54, 225, 255, 0.513);
+		
+	}
+	.joseph_col p { 
+		text-align: center;
+		color: #f2f2f2;
+		
+	}
+	li{
+		list-style: none;
+	}
+	
+	.header {
+		background-color: #1aa1b2;
+        color: aliceblue;
+        text-align: center;
+        padding: 12px;
+		margin-top: 1em;
+		margin-left: 7em;
+		margin-right: 8.3em;
+		
+	}
+
+	a:hover{
+		color: #F5F5F5;
+		text-decoration: none;
+	}
+	a:visited{
+		text-decoration: none;
+		color: #F5F5F5;
+	}
+	a:link{
+		text-decoration: none;
+		color: #000;
+		
+	}
+	
+</style>
