@@ -1,3 +1,4 @@
+
 <style>
 
 header h1 {
@@ -44,7 +45,7 @@ header h1 {
                             <h2> Valentin Ciubuc</h2> 
                     
                         
-                            <p class="bg-info fs-5">Valentin worked on the front-end, the supabase and a script for the mqtt to sort things out faster</p>
+                            <p class="bg-info fs-5">Valentin worked on the application feature, the details page, the script for the mqtt, the searching and the delete pages </p>
                     
                         </article>
         </div>
@@ -52,14 +53,14 @@ header h1 {
                 <article class="bg-primary text-dark m-2 p-3">
                     <h2>Ryan Curran</h2>
                     
-                    <p class="bg-info fs-5">Ryan worked on the supabase, the mqtt and the design for the contact page.</p>
+                    <p class="bg-info fs-5">Ryan worked on the supabase, the mqtt, the sorting, searching, the delete pages ad the details page.</p>
                 </article>
         </div>
             <div class="col-sm-4 ">
                 <article class="bg-primary text-dark m-2 p-3">    
                     <h2>Joseph Newsome</h2>
                     
-                    <p class="bg-info fs-5">Joseph worked on the mqtt and the design for the about us page .</p>
+                    <p class="bg-info fs-5">Joseph worked on the mqtt publisher script and the web layout ideas .</p>
                 </article>
             </div>
         </div>    
